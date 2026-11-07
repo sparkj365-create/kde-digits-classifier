@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kde-digits"
+version = "0.2.0"
+description = "Bayesian KDE classifier for handwritten digits with tuning, evaluation and plots"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.24", "scipy>=1.10", "pandas>=2.0",
+  "scikit-learn>=1.4", "matplotlib>=3.7", "joblib>=1.3",
+]
+
+[tool.setuptools]
+packages = ["kde_digits"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
