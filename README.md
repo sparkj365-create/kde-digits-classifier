@@ -1,5 +1,7 @@
 # kde-digits
 
+[![CI](https://github.com/sparkj365-create/kde-digits-classifier/actions/workflows/ci.yml/badge.svg)](https://github.com/sparkj365-create/kde-digits-classifier/actions)
+
 A Bayesian **Kernel Density Estimation classifier** for handwritten digits, built as a clean, tested, scikit-learn-compatible package.
 
 For each class the model estimates `p(x | class)` with a Gaussian KDE and classifies with Bayes' rule: `p(class | x) ∝ p(x | class) · p(class)`.
@@ -16,6 +18,10 @@ For each class the model estimates `p(x | class)` with a Gaussian KDE and classi
 
 Held-out test accuracy: **0.983**, log-loss: **0.063**.
 (The KDE row is slightly optimistic because its hyper-parameters were chosen on the same folds; the test accuracy is the unbiased figure.)
+
+## Plots
+
+<img src="docs/images/bandwidth_curve.png" width="48%"> <img src="docs/images/confusion_matrix.png" width="48%">
 
 ## Project structure
 
